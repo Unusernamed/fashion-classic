@@ -131,6 +131,7 @@ body {
 .footer {
     padding: 3.125rem 0;
     background-color: #021017;
+    margin-top: 6.25rem;
 }
 
 .footer__brand {
@@ -174,11 +175,23 @@ body {
     margin-right: 0.75rem;
 }
 
+.footer__social:hover {
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+}
+
+.footer__social:hover i {
+    color: white;
+}
+
 .footer__socials li {
 display: inline-block;
 text-align: center;
 }
 
+.footer__text {
+    text-align: center;
+    color: #797979;
+}
 
 
 
