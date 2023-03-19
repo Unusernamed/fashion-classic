@@ -1,6 +1,5 @@
 
 
-
 /*     Main section */
 .main-banner {
     /* background-image: url(../images/gradient\(5\).jfif); */
@@ -138,6 +137,7 @@
     margin-right: 3%;
     text-align: center;
     box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
 }
 
 .service-card img {
@@ -277,10 +277,9 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(59, 70, 218);
-    visibility: hidden;
     z-index: 2;
     opacity: 0.5;
+    transition: all 0.3s ease-in-out;
 }
 
 .portfolio-item__info {
@@ -289,15 +288,19 @@
     left: 5rem;
     visibility: hidden;
     z-index: 2;
+    transition: all 0.4s ease;
+    opacity: 0;
 }
 
 .portfolio-item__info a, p {
     color: white;
     text-decoration: none;
+    
 }
 
 
 .portfolio-item:hover .portfolio-item__overlay {
+    background-color: rgb(59, 70, 218);
     visibility: visible;
     top: 1.25rem;
     left: 1.25rem;
@@ -308,6 +311,7 @@
     visibility: visible;
     bottom: 1.5rem;
     left: 3.75rem;
+    opacity: 1;
 }
 /*     Portfolio section */
 
@@ -324,6 +328,7 @@
 
 .blog-item {
     display: inline-block;
+    overflow: hidden;
     width: 30%;
     margin-right: 3%;
     box-sizing: border-box;
@@ -331,16 +336,29 @@
 
 .blog-item__image {
     width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.blog-image {
+    width: 111%;
 }
 
 .blog-item__image img {
-    width: 65%;
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.5s ease 0s;
 }
 
 .blog-item__info {
     background-color: #F8FAFF;
     padding: 0.625rem;
     color: #797979;
+}
+
+.blog-item:hover .blog-item__image img {
+    transform: scale(1.1);
 }
 
 /* .blog-ietm__author {
@@ -402,18 +420,125 @@
 }
 /*     Partnes section */
 
-
-@media only screen and (max-width:767px) {
+@media screen and (max-width:991px) {
     /* Main section */
     .main-section__image {
         display: none;
     }
-    .main-section__action {
-        display: none;
-    }
+    
     .main-section > div {
         width: 100%;
     }
+
+    .main-banner {
+        background-image: url(../images/gradient\(5\).jfif);
+        background-position: 30rem center;
+        background-size: 31.25rem;
+        background-repeat: no-repeat;
+        min-height: 12.5rem;    
+    }
+
+    /* Main section */
+
+    /* Statistics section */
+    .statistics {
+        margin-top: 3.3rem;
+        text-align: center;
+    }
+    /* Statistics section */
+
+    /* About me */
+    .about-me {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+    }
+    .about-me > div {
+        width: 110%;
+    }
+    .about-me__image {
+        display: none;
+    }
+    /* About me */
+
+    /* Service section */
+    .service-card {
+        width: 45%;
+    }
+    .picture-center {
+        width: 100%;
+        text-align: center;
+    }
+    /* Service section */
+
+    /* Clients section */
+    .clients {
+        padding: 1.5rem 0;
+    }
+    .client-item > div {
+        width: 100%;
+        float: none;
+    }
+    .client-item__info,
+    .client-item__rate {
+        
+        text-align: center;
+    }
+    .client-item__rate {
+        width: 100%;
+        text-align: center;
+    }
+    .client-item div {
+        width: 100%
+    }
+    /* Clients section */
+
+    /* Portfolio section */
+    .portfolio-item {
+        width: 100%;
+    }
+    .portfolio-item {
+        position: static;
+        text-align: center;
+    }
+
+    .portfolio-item img {
+        width: 22rem;
+    }
+
+    .portfolio-item__overlay {
+        display: none;
+    }
+    /* Portfolio section */
+
+
+    /* Services section */
+    .blog-item {
+        width: 45%;
+        margin-bottom: 2.75rem;
+    }
+    
+    .center {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 2srem;
+    }
+    /* Services section */
+
+    /* Partners section */
+
+    /* Partners section */
+
+}
+
+
+
+
+@media only screen and (max-width:767px) {
+    /* Main section */
+    .main-section__action {
+        display: none;
+    }
+    
     /* Main section */
 
     /* Statistics section */
@@ -427,18 +552,7 @@
     }
     /* Statistics section */
 
-    /* About me */
-    .about-me {
-        padding: 1.5rem;
-    }
-    .about-me > div {
-        width: 110%;
-    }
-    .about-me__image {
-        display: none;
-    }
-    /* About me */
-
+    
     /* Services section */
     .services {
         padding: 1.5rem;
@@ -451,28 +565,12 @@
     /* Services section */
 
     /* Clients */
-    .clients {
-        padding: 1.5rem 0;
-    }
-    .client-item > div {
-        width: 100%;
-        float: none;
-    }
+    
     /* Clients */
     
 
     /* Portfolio */
-    .portfolio-item {
-        width: 100%;
-    }
-    .portfolio-item {
-        position: static;
-        text-align: center;
-    }
-
-    .portfolio-item img {
-        width: 22rem;
-    }
+    
     /* Portfolio */
 
     /* Blog section */

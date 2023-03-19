@@ -3,6 +3,10 @@ body {
     font-family: sans-serif;
 }
 
+a {
+    transition: all 0.3s ease-in-out;
+}
+
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -16,6 +20,10 @@ body {
     clear: both;
 }
 
+button {
+    transition: all 0.4s ease-in-out;
+}
+
 .button {
     margin-top: 30px;
     border: none;
@@ -26,7 +34,7 @@ body {
     padding: 1.26rem 2.5rem;
     cursor: pointer;
     border-radius: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase;   
 }
 
 .button:hover {
@@ -197,14 +205,24 @@ text-align: center;
 
 /*     Footer section */
 
+@media screen and (max-width:991px) {
+    .main-navigation {
+        display: none;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+
+
 @media only screen and (max-width: 767px) {
     .container {
         width: 96%;
     }
     
-    .main-navigation {
-        display: none;
-    }
+    
 
     
     /* Footer section */
